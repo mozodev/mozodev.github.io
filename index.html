@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home
+cover: false
+---
+
+{% include header.html %}
+
+<div class="container">
+  <div class="row">
+    {% for post in paginator.posts %}
+      <article class="post col-xs-12" style="margin: .5em 0">
+        <small class="pull-md-right" style="margin-top: 5px;">
+          {% if post.categories.size > 0 %}
+          {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+          {% endif %}
+          <time class="post-date text-muted" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+            {{ post.date | date:"%Y년 %m월 %d일" }}
+          </time>
+        </small>
+        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      </article>
+    {% endfor %}
+  </div>
+</div>

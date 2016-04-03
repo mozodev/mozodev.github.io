@@ -1,0 +1,18 @@
+---
+layout: default
+post_class: post-template page-template
+---
+{% include header.html %}
+
+<main class="content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <section class="post-content">
+          {{content}}
+        </section>
+      </div>
+    </div>
+  </div>
+</main>

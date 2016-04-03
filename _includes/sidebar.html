@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="/">{{ site.title }}</a></h1>
+      <img src="https://avatars2.githubusercontent.com/u/1661950?v=3&amp;s=460" alt="홍영택 (Yeongtaek Hong)" id="profile-img" />
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="/">처음</a>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    </nav>
+
+    <p id="license">달리 정하지 않은 이 블로그의 모든 내용은 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">크리에이티브 커먼즈 저작자 표시 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다. <a href="https://creativecommons.org/licenses/by/4.0/deed.ko"><i class="cc cc-cc"></i> <i class="cc cc-by"></i></a></p>
+  </div>
+</div>
