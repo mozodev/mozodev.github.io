@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "2016 코드포서울 코드어크로스 오픈데이터 데이"
+description:
 ---
 
 ## 1. Open Data Workshop

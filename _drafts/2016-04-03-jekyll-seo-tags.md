@@ -1,7 +1,7 @@
 ---
-title: jekyll-seo-tags
+layout: post
+title: 지킬 검색엔진최적화
 description:
-image:
 ---
 
 예전에는 페이스북 오픈그래프, 트위터 카드 메타태그를 출력하기 위해 _includes 에 social_share.html 이런 식으로 사용했다. 이제는 깃헙 페이지에서 [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)라는 젬을 사용할 수 있어서 시도해보기로 했다.
