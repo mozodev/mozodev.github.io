@@ -4379,11 +4379,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 body {
   padding-top: 3em; }
 
+::selection,
 ::-moz-selection {
-  color: #fff;
-  background: #000; }
-
-::selection {
   color: #fff;
   background: #000; }
 
@@ -4398,3 +4395,7 @@ body {
 
 img {
   max-width: 100%; }
+
+@media (max-width: 543px) {
+  .navbar-fixed-top .container {
+    padding: 0; } }

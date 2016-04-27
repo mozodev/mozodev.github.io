@@ -3,5 +3,4 @@ _site
 .sass-cache
 node_modules
 *.log
-_config.dev.yml
 .jekyll-metadata

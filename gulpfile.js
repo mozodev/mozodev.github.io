@@ -34,7 +34,7 @@ g.task('browser-reload', ['jekyll-build', 'sass'], function () {
 
 // css - sass, minify, sourcemap
 g.task('sass', function(){
-  return g.src('_src/main.sass')
+  return g.src('_src/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(g.dest('_site/assets'))
     .pipe(bs.reload({stream:true}))
